@@ -10,7 +10,7 @@ Routines in the main folder require the private routines for seaglider data extr
 
 Wind speed is extracted from the OPeNDAP website for the NOAA/NCDC Blended 6-hourly 0.25-degree Sea Surface Winds (http://www.ncdc.noaa.gov/thredds/dodsC/oceanwinds6hr.html).
 Sea level pressure is extracted from the NCEP reanalysis 2 (http://www.esrl.noaa.gov/psd/thredds/dodsC/Datasets/ncep.reanalysis/surface_gauss/catalog.html).
-Sea level anomaly is retrieved from the near real-time data provided by AVISO through the OPeNDAP website (http://aviso-users:grid2010@opendap.aviso.oceanobs.com/thredds/dodsC/dataset-duacs-dt-global-allsat-msla-h). 
+Sea level anomaly is retrieved from the near real-time data provided by AVISO through the OPeNDAP website (http://opendap.aviso.oceanobs.com/thredds/catalog.html). 
 
 Other Matlab functions that are called in the scripts are found in the common/ subfolder:
 - betasw_ZHH2009.m: computes scattering by pure seawater (by Xiaodong Zhang)
