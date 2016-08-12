@@ -2,10 +2,10 @@
 
 This repository contains MATLAB routines to extract data from the Seaglider missions launched by the C-MORE group at the University of Hawaii. Raw data of glider dives are available on the ftp address of SOEST at the University of Hawaii (ftp://ftp.soest.hawaii.edu/pilot/).
 Each extractSg\*.m routines creates a final output file \*data.mat containing six variables:
-	- dived & diveu: structures with data on each dive (date, position, mixed layer depth, wind, sea level pressure, sea level anomaly, surface O2 flux)
-	- sgd & sgu: tables containing data binned on depth for each variable (T, S, etc..)
-	- isod & isou: tables containing data binned on potential density at levels defined by the average density values at the dept of the sgd variable.
-Last letter d indicates downcast, while u indicate upcast.
+- dived & diveu: structures with data on each dive (date, position, mixed layer depth, wind, sea level pressure, sea level anomaly, surface O2 flux)
+- sgd & sgu: tables containing data binned on depth for each variable (T, S, etc..)
+- isod & isou: tables containing data binned on potential density at levels defined by the average density values at the dept of the sgd variable.
+Last letter d indicates downcast, while u indicates upcast.
 
 Routines in the main folder require the private routines for Seaglider data extraction at https://github.com/whoi-glider/glider-kit  (David Nicholson) and routines to extract OpenDap data and compute gas exchange at https://github.com/whoi-glider/oce_tools (David Nicholson and Cara Manning). The GSW Oceanographic Toolbox is also required (http://www.teos-10.org/).
 

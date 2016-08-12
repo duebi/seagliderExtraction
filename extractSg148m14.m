@@ -13,6 +13,9 @@ sgpath =  [upth(1:end-1) '/Data/seaglider/' mission];
 clear upth
 load([sgpath '/oxy_cal'])
 load([sgpath '/chl_cal'])
+chl_cal.chla = 1000*chl_cal.chla; % in ng/L
+chl_cal.phaeop = 1000*chl_cal.phaeop; % in ng/L
+
 %load pcpn_cal
 cd(sgpath)
 nd = length(d_range(1):d_range(2)); % total number of dives
@@ -460,7 +463,7 @@ diveu.units{end+1} = 'mld003: mixed layer depth with drho 0.03 kg m-3 from 10m (
 diveu.units{end+1} = 'mld003sig: potential density anomaly at MLD (kg m-3)';
 clear mld ind003 sig003 mld003 mld003sig
 
-% Save new variables sgd, dived, isod, sgu, diveu and isou
+%% Save new variables sgd, dived, isod, sgu, diveu and isou
     save(datafile,'sgd','dived','isod','sgu','diveu','isou')
 %%
 

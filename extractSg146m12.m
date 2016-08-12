@@ -11,6 +11,8 @@ sgpath =  [upth(1:end-1) '/Data/seaglider/' mission];
 clear upth
 load([sgpath '/oxy_cal'])
 load([sgpath '/chl_cal'])
+chl_cal.chla = 1000*chl_cal.chla; % in ng/L
+chl_cal.phaeop = 1000*chl_cal.phaeop; % in ng/L
 
 %load pcpn_cal
 cd(sgpath)
@@ -190,6 +192,7 @@ title('upper 100m')
 
 % 9. Fluorescence-Chlorophyll calibration from chl pigment measurements
 % build comparison array
+
 chl_comp = chl_cal;
 chl_comp.totp = chl_cal.chla + chl_cal.phaeop;
 chl_comp.dist = NaN(height(chl_cal),1);
